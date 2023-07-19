@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <button id="home">Airport Demo</button>
+        <button id="admin-planes-btn">Administrate planes</button>
+        <button id="admin-gates-btn">Administrate Boarding gates</button>
+    </div>
+    
+    <div id="main-container">
+        <div class="menu-container">
+            <span class="boarding-gate">❒</span>
+            <p>Boarding gate</p>
+            <span class="boarding-gate available">❒</span>
+            <p>Available</p>
+            <span class="boarding-gate boarding">❒</span>
+            <p>Boarding</p>
+            <span class="plane">✈</span>
+            <p>Plane</p>
+            <span class="plane boarding">✈</span>
+            <p>Boarding</p>
+            <span class="plane ready">✈</span>
+            <p>Ready</p>
+            <span class="plane flying">✈</span>
+            <p>Flying</p>
+            <span class="plane maintenance">✈</span>
+            <p>Maintenance</p>
+        </div>
+
+        <div class="map-container" id="map-container">
+            <span class="building1"></span>
+            <span class="building2"></span>
+            <span class="building3"></span>
+            <p id="gate-a1">A1</p>
+            <p id="gate-a2">A2</p>
+            <p id="gate-a3">A3</p>
+            <p id="gate-a4">A4</p>
+            <p id="gate-b1">B1</p>
+            <p id="gate-b2">B2</p>
+            <p id="gate-b3">B3</p>
+            <p id="gate-b4">B4</p>
+           
+        </div>
+
+        <div id="planes-container">
+        
+        </div>
+    </div>
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

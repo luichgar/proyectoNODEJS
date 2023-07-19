@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a plane</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Add a plane</h1>
+    <button id="return-planes">Return</button>
+  </div>
+    
+    <form id="add-plane-form">
+        <label for="registration-number">Registration Number:</label>
+        <input type="text" id="registration-number" placeholder="A1B2C3" required>
+    
+        <label for="airline">Airline:</label>
+        <input type="text" id="airline" placeholder="American Airlines"required>
+    
+        <label for="passenger-capacity">Passenger Capacity:</label>
+        <input type="number" id="passenger-capacity" placeholder="200 ... 400" required>
+    
+        <label for="plane-status">Plane Status:</label>
+        <input id="plane-status" required list="plane-statuses">
+        <datalist id="plane-statuses">
+          <option value="ready">
+          <option value="flying">
+          <option value="maintenance">
+          <option value="boarding">
+        </datalist>
+    
+        <button id="plane-submit" type="submit">Add Plane</button>
+
+        
+      </form>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/addPlane.js"></script>
+</body>
+</html>

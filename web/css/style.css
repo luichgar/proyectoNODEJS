@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap');
+@import "grid_pos.css";
+/* :root{
+} */
+
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background-color: #142559;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+.ready, .available{
+    color: green;
+}
+
+.flying {
+    color: aquamarine;
+}
+
+.maintenance{
+    color: orange;
+}
+
+.boarding{
+    color: #535455;
+}
+
+.plane, .boarding-gate {
+    font-size: min(3vw, 30px);
+    font-weight: bold;
+    place-self: center;
+    transition: text-shadow 0.5s ease-out ;
+}
+
+.plane:hover, .boarding-gate:hover {    
+    text-shadow: #3D58F2 1px 1px 10px;
+    cursor: pointer;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > *{
+    margin: 10px;
+}
+
+#admin-planes-btn, #admin-gates-btn, #home, #add-plane, #return-planes, #return-gates{
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    background-color: #0e1a3e;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+#add-plane{
+    color: #0e1a3e;
+    background-color: white;
+}
+
+#main-container{
+    display: flex;
+}
+
+.map-container {
+    margin: auto;
+    display: grid;
+    width: clamp(300px, 50vw, 800px);
+    height: clamp(300px, 50vw, 800px);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.building1, .building2, .building3{
+    background-color: #AFB8D8;
+    
+}
+
+.menu-container{
+
+    margin: auto;
+    display: grid;
+    width: clamp(100px, 15vw, 300px);
+    gap: 5px;
+    height: clamp(300px, 50vw, 800px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.menu-container > p {
+    font-size: max(1vw, 15px);
+}
+
+.map-legend{
+    grid-column: 1/3;
+    font-size: min(2vw, 30px);
+    place-self: center;
+}
+
+#planes-container{
+    margin: auto;
+    display: grid;
+    width: clamp(100px, 15vw, 300px);
+    height: clamp(300px, 50vw, 800px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+#admin-planes-container, #admin-gates-container, #assign-planes-container{
+    margin: 20px;
+    display: grid;
+    grid-auto-flow: row;
+    place-items: center;
+    place-content: center;
+}
+
+#admin-planes-container{
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(25, 1fr);
+}
+
+#admin-gates-container{
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+}
+
+#assign-planes-container{
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(25, 1fr) ;
+}
+
+.update-btn, .remove-btn {
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#add-plane-form, #update-plane-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#add-plane-form > *{
+    margin: 10px;
+}
+
+#update-plane-form > *{
+    margin: 10px;
+}
+input, #plane-submit {
+    text-align: center;
+    height: 25px;
+    border-radius: 10px;
+}
+
+#plane-submit:hover{
+    cursor: pointer;
+}
+
